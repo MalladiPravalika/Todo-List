@@ -1,0 +1,164 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #e0e0e0;
+}
+
+.todo-container {
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    padding: 20px;
+    border-radius: 10px;
+    width: 400px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+h3 {
+    margin-top: 0;
+    font-weight: 600;
+    font-size: 1.5em;
+    color: #ecf0f1;
+}
+
+/* Task List */
+.task-list {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.task {
+    padding: 12px;
+    margin: 6px 0;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #34495e;
+    transition: background-color 0.3s;
+}
+
+.task:hover {
+    background-color: #3b5770;
+    cursor: pointer;
+}
+
+.task.selected {
+    background-color: #3498db; /* Blue background for selected task */
+    color: #ffffff;
+}
+
+.task.done {
+    text-decoration: line-through;
+    color: #7f8c8d;
+}
+
+/* Priority Colors */
+.priority-high {
+    color: #e74c3c; /* Red for high priority */
+}
+
+.priority-medium {
+    color: #f1c40f; /* Yellow for medium priority */
+}
+
+.priority-low {
+    color: #2ecc71; /* Green for low priority */
+}
+
+/* Task Details */
+.task-details {
+    font-size: 0.85em;
+    color: #bdc3c7;
+}
+
+/* Warning Message */
+.warning {
+    display: none;
+    color: #e74c3c;
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* Controls */
+.controls {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.controls input,
+.controls select {
+    width: 90%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #95a5a6;
+    font-size: 0.95em;
+    outline: none;
+    background-color: #ecf0f1;
+    color: #2c3e50;
+}
+
+.controls input:focus,
+.controls select:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+}
+
+.controls button {
+    width: 90%;
+    padding: 10px;
+    margin: 5px 0;
+    color: #ffffff;
+    background-color: #34495e;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+
+.controls button:hover {
+    background-color: #3b5770;
+}
+
+/* Button Colors */
+.controls button:nth-child(1) { /* Add Task */
+    background-color: #7f8c8d; /* Neutral color for Add Task button */
+}
+
+.controls button:nth-child(1):hover {
+    background-color: #95a5a6;
+}
+
+.controls button:nth-child(2) { /* Remove Task */
+    background-color: #e74c3c;
+}
+
+.controls button:nth-child(2):hover {
+    background-color: #c0392b;
+}
+
+.controls button:nth-child(3) { /* Mark as Done */
+    background-color: #3498db;
+}
+
+.controls button:nth-child(3):hover {
+    background-color: #2980b9;
+}
+
+.controls button:nth-child(4) { /* Edit Task */
+    background-color: #f39c12;
+}
+
+.controls button:nth-child(4):hover {
+    background-color: #e67e22;
+}
